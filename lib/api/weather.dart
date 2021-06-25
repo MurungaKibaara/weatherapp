@@ -3,14 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart';
-// import 'package:flutter_config/flutter_config.dart';
+import 'package:flutter_config/flutter_config.dart';
 
 import 'package:weatherapp/utils/location.dart';
 
-final apiKey =
-    "c7e1208b1f15aaa4c1ef6ba665a97b2f"; //FlutterConfig.get('open_api_key');
-final apiUrl =
-    "http://api.openweathermap.org/data/2.5/weather"; //FlutterConfig.get('open_api_url');
+final apiKey = FlutterConfig.get("OPEN_API_KEY");
+final apiUrl = FlutterConfig.get("OPEN_API_URL");
 
 class WeatherDisplayData {
   Icon weatherIcon;
